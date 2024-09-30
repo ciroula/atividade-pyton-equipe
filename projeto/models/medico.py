@@ -6,4 +6,6 @@ class Medico(Funcionario):
         super().__init__(nome, telefone, email, endereco)
     def __str__(self) -> str:
         return super().__str__() + f"\ncrm{self.crm}"
+    def salario_final():
+        pass
     

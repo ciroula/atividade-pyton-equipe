@@ -54,7 +54,6 @@ class Funcionario(ABC):
         if not valor.strip():
             raise TypeError("O email estar vazio!")
 
-    @abstractmethod
     def __str__(self) -> str:
         return (
             f"Nome: {self.nome}"
@@ -62,4 +61,7 @@ class Funcionario(ABC):
             f"Email: {self.email}"
             f"Endereco: {self.endereco}"
         )
+    @abstractmethod
+    def salario_final():
+        pass
     
