@@ -10,3 +10,6 @@ class Engeneheiro(Funcionario):
         return (f"{super().__str__()}"
                 f"CREA: {self.crea}"
                 )
+    
+    def salario_final():
+        return 4000.00
