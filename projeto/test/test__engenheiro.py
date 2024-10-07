@@ -38,12 +38,12 @@ def test_criar_engenheiro_endereco_cidade(criar_engenheiro):
     assert criar_engenheiro.endereco.cidade == "salvador"
 
     
-def teste_nome_tipo_inteiro_engenheiro(criar_engenheiro):
+def teste_nome_tipo_inteiro_engenheiro():
     with pytest.raises (TypeError,match= "O nome deve ser um texto!"):
         Engenheiro(4787, "719", "Michel@",
                    Endereco("tancredo", "25", "casa", "86615", "salvador",unidade_federativa.RIO_DE_JANEIRO), Sexo.MASCULINO, "456123")
     
-def teste_nome_vazio_engenheiro(criar_engenheiro):
+def teste_nome_vazio_engenheiro():
     with pytest.raises (TypeError, match= "O nome estar vazio!"):
         Engenheiro("", "719", "Michel@", 
                    Endereco("tancredo", "25", "casa", "86615", "salvador", unidade_federativa.SAO_PAULO), Sexo.MASCULINO, "456123")

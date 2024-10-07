@@ -1,4 +1,5 @@
 import os
 import pytest
 os.system("cls || clear")
-os.system("pytest")
+if __name__ == "__main__":
+    os.system("pytest")
