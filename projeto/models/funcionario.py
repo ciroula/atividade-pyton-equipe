@@ -1,13 +1,17 @@
 import os
 from projeto.models.endereco import Endereco
+from projeto.models.enums.sexo import Sexo
+from projeto.models.enums.UnidadeFederativa import unidade_federativa
 from abc import ABC, abstractmethod
 
 class Funcionario(ABC):
-    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco) -> None:
+    def __init__(self, nome: str, telefone: str, email: str, endereco: Endereco, Sexo: str, unidade_federativa: str) -> None:
         self.nome = self.verificar_nome(nome)
         self.telefone = telefone
         self.email = email
         self.endereco = endereco
+        self.sexo = Sexo
+        self.UnidadeFederativa = unidade_federativa
 
     def verificar_nome(self, valor):
         self.verificar_nome_tipo_invalido(valor)
@@ -31,6 +35,8 @@ class Funcionario(ABC):
             f"telefone: {self.telefone}"
             f"Email: {self.email}"
             f"Endereco: {self.endereco}"
+            f"Sexo: {self.sexo}"
+            f"UF: {self.UnidadeFederativa}"
         )
     @abstractmethod
     def salario_final():
